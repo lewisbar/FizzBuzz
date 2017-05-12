@@ -26,10 +26,10 @@ class Brain {
         return number % divisor == 0
     }
     
-    func check(number: Int) -> String {
-        if isDivisibleByFifteen(number: number) { return "FizzBuzz" }
-        else if isDivisibleByThree(number: number) { return "Fizz" }
-        else if isDivisibleByFive(number: number) { return "Buzz" }
-        else { return String(number) }
+    func check(number: Int) -> Move {
+        if isDivisibleByFifteen(number: number) { return .fizzBuzz }
+        else if isDivisibleByThree(number: number) { return .fizz }
+        else if isDivisibleByFive(number: number) { return .buzz }
+        else { return .number }
     }
 }
